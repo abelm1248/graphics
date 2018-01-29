@@ -8,13 +8,17 @@ void setup(){
 }
 
 void draw(){
-  image(img, 0, 0);
   img.loadPixels();
   for(int i=0;i<img.width;i++){
     for(int j=0;j<img.height;j++){
       idx = i * img.height + j;
-      img.pixels[idx] = color(0, 0, 255);
+      float red = red(img.pixels[idx]);
+      float green  = green(img.pixels[idx]);
+      float blue = blue(img.pixels[idx]);
+      img.pixels[idx] = color(red, green, blue+100);
     }
   }
   img.updatePixels();
+  image(img, 0, 0);
+  noLoop();
 }
