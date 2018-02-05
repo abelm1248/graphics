@@ -1,19 +1,20 @@
-color orange = color(237,118,26);
-color white = color(255,255,255);
-color buns = color(234, 178, 92);
-color patty = color(121, 93, 51);
-color cheese1 = color(250, 227, 13);
-color cheese2 = color(242, 241, 235);
-color lettuce = color(11,142,21);
-color tomato = color(255,64,26);
-color bacon = color(155,39,39);
-color baconOutline = color(100,11,11);
-
 void setup() {
   size(500, 500);
 }
 
 void draw() {
+  //declare variables
+  color orange = color(237,118,26);
+  color white = color(255,255,255);
+  color buns = color(234, 178, 92);
+  color patty = color(121, 93, 51);
+  color cheese1 = color(250, 227, 13);
+  color cheese2 = color(242, 241, 235);
+  color lettuce = color(11,142,21);
+  color tomato = color(255,64,26);
+  color bacon = color(155,39,39);
+  color baconOutline = color(100,11,11);
+  
   //background
   noStroke();
   fill(orange);

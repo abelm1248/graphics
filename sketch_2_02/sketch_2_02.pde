@@ -14,6 +14,9 @@ void draw(){
       background(255);
     }
   }
+  if(keyPressed == true){
+    ellipse(mouseX,mouseY,50,50);
+  }
   ***/
 }
 
@@ -28,4 +31,8 @@ void mousePressed(){
 
 void mouseMoved(){
   point(mouseX,mouseY);
+}
+
+void keyPressed(){
+  rect(mouseX,mouseY,100,100);
 }

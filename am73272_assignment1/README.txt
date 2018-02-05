@@ -1,0 +1,1 @@
+Open 'am73272_assignment1.pde' and click 'run' to display the image.
