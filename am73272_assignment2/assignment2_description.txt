@@ -1,0 +1,11 @@
+The program is always displaying the buffer image, it only uses the original image to update the buffer. Pressing a key will call the apply_filter() function and pass in the neccessary values.
+
+Pressing 0 uses the .copy() function to reset the buffer image by copying from the orignal, untouched image. It does this at the begining of the apply_filter() funciton to avoid doing any uneccessary pixel traversal.
+
+The grayscale filter uses the suggested method of averating the original's rbg channels and assigning that value to the buffer's rgb channels. Since this filter does not utilize a kernel, it does this inside the nested x and y loops but before the i and j nested loops.
+
+The contrast filter also does not utilize a kernel so it does all calculations before the i and j nested loops. It changes colorMode to HSV and checks each pixel's brightness. If it is lower than the threshold of NUM then it subtracts 5 from the brightness. Conversly, if it is higher then it adds 5. 
+
+The Gaussian blur approximation filter uses the given kernel of {{}} and a quadruple nested loop to calculate each pixel's rgb values.
+
+The edge detection filter uses two kernels, called Sobel operators, to calculate horizontle and vertical values. The program traverses through the image and calculates each pixel's vertical and horizonle value. It then takes the magnitude of both values and assigns it to the buffer's corresponding pixel.
